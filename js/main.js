@@ -11,7 +11,16 @@ $.getJSON( 'https://api.unsplash.com/collections/214/photos?client_id=1b31b08eb4
         console.log( colour );
         var location = value.user.location;
         console.log( location );
+        $( '.colour_box' ).css( "background-color", colour );
+        $( '.location' ).text( location );
         
-        $( '.colour-box' ).css( "background-color", colour );
+        // check which items in the array do not have a colour and location value
+
     } );
+
+        
+        if( colour && value = null ){
+            delete( value );
+        }    
+    
 } );//////
